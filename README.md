@@ -178,7 +178,7 @@ The final component is a Control Unit. Based on the given instruction, the Contr
 The Control Unit determines all datapath control signals using only the opcode, funct3, and funct7.
 
 Below is the complete single-cycle datapath:
--> ![single-cycle-datapath](images/custom-riscv-single-cycle-datapath.png)
+-> ![single-cycle-datapath](images/custom-riscv-single-cycle-datapath(1).png)
 
 ## Pipelining a CPU
 One important drawback of the single-cycle CPU is that every single instruction is require to complete in a singular clock cycle. This means that you are bottlenecked by your slowest instruction.
@@ -202,7 +202,7 @@ In my single-cycle CPU, I found that the earliest a branch/flush can be determin
 Modern CPUs have advanced branch prediction to limit flushing. However, for this implementation I opted to go for a simpler design that simply predicts that a branch/jump is not taken, filling up the pipeline with potentially improper instructions, and then flushing those register if the branch happens to be taken. This does mean that every time a jump is taken the pipeline is guaranteed to fill up with improper instruction, however I opted for this design to maintain simplicity.
 
 The pipelined CPU described above is shown below:
--> ![custom-riscv-pipelined-datapath](images/custom-riscv-pipelined-datapath.png)
+-> ![custom-riscv-pipelined-datapath](images/custom-riscv-pipelined-datapath(1).png)
 
 ### Pipeline Hazards and Resolution Techniques
 The 5-stage Pipeline design also presents potential errors. For example given the following program:
