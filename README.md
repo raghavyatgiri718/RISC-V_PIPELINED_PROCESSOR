@@ -16,7 +16,7 @@
   - [5-Stage Pipeline](#5-stage-pipeline)
   - [Pipeline Hazards and Resolution Techniques](#pipeline-hazards-and-resolution-techniques)
   - [Verification](#verification)
-- [Future Plans](#future-plans)
+
 
 ## Overview
 
