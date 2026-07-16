@@ -31,7 +31,7 @@ This project implements a fully functional **pipelined RISC-V processor** using 
 ## Author
 Raghav Yatgiri
 
-![RISCV_CPU_Datapath_Final](docs/images/RISCV_CPU_Datapath_Final.png)
+![RISCV_CPU_Datapath_Final](images/RISCV_CPU_Datapath_Final.png)
 
 ## Table of Contents
 - [Overview](#overview)
