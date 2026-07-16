@@ -1,35 +1,3 @@
-# Pipelined RISC-V Processor 
-
-## Overview
-
-This project implements a fully functional **pipelined RISC-V processor** using Verilog and deploys it on a **PYNQ-Z2 FPGA** board. The processor is capable of executing a wide range of RISC-V instructions with improved performance through pipelining.
-
-## Features
-
-- Five-stage pipelined architecture: **Fetch, Decode, Execute, Memory, Writeback**
-- Supports **base RISC-V RV32I instruction set**
-- Handles **data and control hazards** using forwarding and stalling
-- Improved throughput over a single-cycle implementation
-- Supports **base RISC-V RV32I instruction set**
-- Synthesized and deployed on **PYNQ-Z2 FPGA**
-- Simulated and verified using **testbench programs**
-
-## Datapath Design
-
-## Datapath Design
-
-![Datapath Design](https://github.com/user-attachments/assets/a5f49b91-5b1c-43f8-bbd1-61a300c4ff9b?raw=true)
-
-## Instruction Set Formats
-
-![Instruction Set Formats](https://github.com/user-attachments/assets/c48e7544-7cf9-4859-8c07-e1c427a0883d?raw=true)
-
-## Instruction Opcodes
-
-![Instruction Opcodes](https://github.com/user-attachments/assets/f536614a-7785-46ec-8985-ac7a7914367f?raw=true)
-
-## Author
-Raghav Yatgiri
 
 ![RISCV_CPU_Datapath_Final](images/RISCV_CPU_Datapath_Final.png)
 
@@ -210,7 +178,7 @@ The final component is a Control Unit. Based on the given instruction, the Contr
 The Control Unit determines all datapath control signals using only the opcode, funct3, and funct7.
 
 Below is the complete single-cycle datapath:
-![single-cycle-datapath](images/custom-riscv-single-cycle-datapath.png)
+-> ![single-cycle-datapath](images/custom-riscv-single-cycle-datapath.png)
 
 ## Pipelining a CPU
 One important drawback of the single-cycle CPU is that every single instruction is require to complete in a singular clock cycle. This means that you are bottlenecked by your slowest instruction.
@@ -234,7 +202,7 @@ In my single-cycle CPU, I found that the earliest a branch/flush can be determin
 Modern CPUs have advanced branch prediction to limit flushing. However, for this implementation I opted to go for a simpler design that simply predicts that a branch/jump is not taken, filling up the pipeline with potentially improper instructions, and then flushing those register if the branch happens to be taken. This does mean that every time a jump is taken the pipeline is guaranteed to fill up with improper instruction, however I opted for this design to maintain simplicity.
 
 The pipelined CPU described above is shown below:
-![custom-riscv-pipelined-datapath](images/custom-riscv-pipelined-datapath.png)
+-> ![custom-riscv-pipelined-datapath](images/custom-riscv-pipelined-datapath.png)
 
 ### Pipeline Hazards and Resolution Techniques
 The 5-stage Pipeline design also presents potential errors. For example given the following program:
