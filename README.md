@@ -21,7 +21,7 @@
 ## Overview
 
 
-This processor is a 5-stage (IF/ID/EX/MEM/WB) pipelined. It uses forwarding, pipeline stalling, and register file write through for a complete hazard resolution.
+This processor is 5-stage (IF/ID/EX/MEM/WB) pipelined. It uses forwarding, pipeline stalling, and register file write through for a complete hazard resolution.
 
 ## Building a Single-Cycle CPU
 
