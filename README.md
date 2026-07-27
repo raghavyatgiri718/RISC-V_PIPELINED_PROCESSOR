@@ -3,7 +3,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Building a Single-Cycle CPU](#building-a-single-cycle-cpu)
+- [Building a Single-Cycle Processor](#building-a-single-cycle-cpu)
   - [RV32I ISA](#rv32i-isa)
   - [Register-Register Operation](#register-register-operation)
   - [Register-Immediate Operation](#register-immediate-operation)
@@ -12,7 +12,7 @@
   - [Jump](#jump)
   - [Other](#other)
   - [Control Unit Design](#control-unit-design)
-- [Pipelining a CPU](#pipelining-a-cpu)
+- [Pipelining a Processor](#pipelining-a-cpu)
   - [5-Stage Pipeline](#5-stage-pipeline)
   - [Pipeline Hazards and Resolution Techniques](#pipeline-hazards-and-resolution-techniques)
   - [Verification](#verification)
@@ -20,7 +20,6 @@
 
 ## Overview
 
-The following documentation describes this Central Processing Unit (CPU) design, beginning with an explanation of the approach I took to design my own custom single-cycle CPU for RISC-V, then pipelining this processor and implementing full hazard resolution. 
 
 This processor is a 5-stage (IF/ID/EX/MEM/WB) pipelined. It uses forwarding, pipeline stalling, and register file write through for a complete hazard resolution.
 
