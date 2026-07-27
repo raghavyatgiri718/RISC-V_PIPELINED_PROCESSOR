@@ -20,9 +20,9 @@
 
 ## Overview
 
-The following documentation fully describes this Central Processing Unit (CPU) design, beginning with an explanation of the approach I took to design my own custom single-cycle CPU for RISC-V, then Pipelining this CPU and implementing full hazard resolution. 
+The following documentation describes this Central Processing Unit (CPU) design, beginning with an explanation of the approach I took to design my own custom single-cycle CPU for RISC-V, then pipelining this processor and implementing full hazard resolution. 
 
-This CPU is a 5-stage (IF/ID/EX/MEM/WB) Pipelined CPU . It uses forwarding, pipeline stalling, and register file write through for a complete hazard resolution. Verification of the CPU's functionality was confirmed using hand-written isolated module-level testbenches and hand-assembled machine code programs with GTKWave analysis.
+This processor is a 5-stage (IF/ID/EX/MEM/WB) pipelined. It uses forwarding, pipeline stalling, and register file write through for a complete hazard resolution.
 
 ## Building a Single-Cycle CPU
 
